@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me amarías si fuese un gusano?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            max-width: 600px; /* Opcional: Ajusta el ancho máximo del contenedor */
+        }
+        h1 {
+            color: #333;
+        }
+        .options, .additional-options, .no-fea-image, .cute-worm-image {
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .button.no {
+            background-color: #dc3545;
+        }
+        .hidden {
+            display: none;
+        }
+        img {
+            max-width: 100%; /* Ajusta el tamaño de la imagen al contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+            border-radius: 8px; /* Opcional: Redondea las esquinas de la imagen */
+            margin-bottom: 20px; /* Espacio debajo de la imagen */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Imagen con URL proporcionada -->
+        <img src="https://i.pinimg.com/564x/d2/b9/a6/d2b9a63cfde05b2262a9d17950bb22b0.jpg" alt="Gusano divertido">
+        <h1>Me amarías si fuese un gusano?</h1>
+        <div id="initial-options" class="options">
+            <button class="button" onclick="showAdditionalOptions()">Sí</button>
+            <button class="button no" onclick="showNoFeaImage()">No, fea</button>
+        </div>
+        <div id="additional-options" class="additional-options hidden">
+            <button class="button" onclick="showCuteWormImage()">Sí, porque eres un gusano lindo</button>
+            <button class="button no" onclick="alert('Mentiroso')">Mentiroso</button>
+        </div>
+        <div id="no-fea-image" class="no-fea-image hidden">
+            <!-- Imagen a mostrar cuando se selecciona "No, fea" -->
+            <img src="https://i.pinimg.com/564x/08/f7/77/08f7776535e3df8d2385fdf916e76ea4.jpg" alt="Eres pesado">
+        </div>
+        <div id="cute-worm-image" class="cute-worm-image hidden">
+            <!-- Imagen a mostrar cuando se selecciona "Sí, porque eres un gusano lindo" -->
+            <img src="https://www.gardentech.com/-/media/project/oneweb/gardentech/images/pest-id/updated-bug-post/cutworm/black-cutworm-face-straighton.jpg" alt="Gusano lindo">
+        </div>
+    </div>
+
+    <script>
+        function showAdditionalOptions() {
+            // Oculta las opciones iniciales
+            document.getElementById('initial-options').classList.add('hidden');
+            // Muestra las opciones adicionales sin el mensaje
+            document.getElementById('additional-options').classList.remove('hidden');
+        }
+
+        function showNoFeaImage() {
+            // Oculta las opciones iniciales
+            document.getElementById('initial-options').classList.add('hidden');
+            // Muestra la imagen de "No, fea"
+            document.getElementById('no-fea-image').classList.remove('hidden');
+        }
+
+        function showCuteWormImage() {
+            // Oculta las opciones iniciales
+            document.getElementById('initial-options').classList.add('hidden');
+            // Oculta las opciones adicionales
+            document.getElementById('additional-options').classList.add('hidden');
+            // Muestra la imagen de "Sí, porque eres un gusano lindo"
+            document.getElementById('cute-worm-image').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
